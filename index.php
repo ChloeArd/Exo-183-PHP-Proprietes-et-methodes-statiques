@@ -13,7 +13,18 @@
  *
  * 3. Créez une instance DOS ayant le nom $prime et initialisez la comme nous l'avons vu (dans index.php).
  *
- * 4. Invoquez la méthode addAbo() plusieurs fois pour les les objets créés, le nombre de fois n'a pas d'importance.
+ * 4. Invoquez la méthode addAbo() plusieurs fois pour les objets créés, le nombre de fois n'a pas d'importance.
  *
  * 5. Invoquez la méthode vous permettant de récupérer le nombre total d'abonnements aux plateformes VOD de manière à afficher le nombre total d'abonnements.
  */
+
+require "./classes/VOD.php";
+
+$netflix = new VOD();
+$prime = new VOD();
+
+for ($i = 0; $i < 5; $i++) {
+    echo VOD::getAbo()."<br>";
+}
+
+echo "Nombre total d'abonnements : ".$netflix->getNbTotalAbo()."<br>";
